@@ -1,6 +1,7 @@
 
 
 ---------------------------------------------------------------------LAB 4--------------------------------------------------------------------------
+
 -EX1:
   S1: run program by "play button"
   S2: test case (username, password) is ready on init() function of file LoginServlet.java
