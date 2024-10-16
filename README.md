@@ -32,3 +32,21 @@
  S2: add "/register" to link
  S3: input your info
  S4: click "Register" to check your infomation 
+
+
+---------------------------------------------------------------------LAB 5--------------------------------------------------------------------------
+
+S1: runs program by "play button"
+S2: accesses link "http://localhost:8080/Lab5/register" to regists an account
+S3: after register, you will direct to login
+S4: inputs your account
+S5: inputs new Product information and clicks "Add Product"
+S5: clicks "Delete" to delete product
+S6: clicks "Log out" to out your account
+
+--config
+-database name: lab5
+-username: root
+-password: root
+
+-NOTE: You can use link to check your session login
