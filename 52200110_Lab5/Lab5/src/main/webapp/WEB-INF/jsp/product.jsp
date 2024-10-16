@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page import="java.util.List" %>
+
+
+<!DOC TYPE html>
 <html lang="vi">
 <head>
     <title>Product List</title>
@@ -11,33 +17,52 @@
 </head>
 <body style="background-color: #f8f8f8">
 
+<%
+    String userName = (String) session.getAttribute("sessionAccount");
+    if (userName == null) {
+         String site = new String("http://localhost:8080/Lab5/login");
+         response.setStatus(response.SC_MOVED_TEMPORARILY);
+         response.setHeader("Location", site);
+    }else if(userName.equals("")){
+        String site = new String("http://localhost:8080/Lab5/login");
+         response.setStatus(response.SC_MOVED_TEMPORARILY);
+         response.setHeader("Location", site);
+    }
+%>
+
 <div class="container-fluid p-5">
     <div class="row mb-5">
         <div class="col-md-6">
             <h3>Product Management</h3>
         </div>
         <div class="col-md-6 text-right">
-            Hello <span class="text-danger">Username</span> | <a href="#">Logout</a>
+            Hello <span class="text-danger">${userName}</span> |
+            <form class="mt-3" method="post" action="product"  >
+                <div class="form-group">
+                    <input type="hidden" name = "logout" value="logout"/>
+                    <button class="btn btn-success mr-2" type = "submit"">Logout</button>
+                </div>
+            </form>
         </div>
     </div>
     <div class="row rounded border p-3">
         <div class="col-md-4">
             <h4 class="text-success">Add new product</h4>
-            <form class="mt-3" method="post" enctype="multipart/form-data">
+            <form class="mt-3" method="post" action="product"  >
                 <div class="form-group">
                     <label for="product-name">Product's Name</label>
-                    <input class="form-control" name="name" type="text" placeholder="Input product's name" id="product-name" >
+                    <input class="form-control"  type="text" placeholder="Input product's name" id="product-name" name = "name-product">
                 </div>
                 <div class="form-group">
                     <label for="price">Product's price</label>
-                    <input class="form-control" name="price" type="number" placeholder="Input product's price" id="price" >
+                    <input class="form-control"  type="number" placeholder="Input product's price" id="price" name="price-product">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-success mr-2">Add Product</button>
+                    <button class="btn btn-success mr-2" type="submit">Add Product</button>
                 </div>
 
 
-                <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
                 <%
                     String sessionErrMsg = (String) session.getAttribute("sessionErrMsg");
                     if (sessionErrMsg != null) {
@@ -55,26 +80,29 @@
                 <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Product's name'</th>
+                    <th>Product's name</th>
                     <th>Price</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-                <c:if test="${not empty sessionScope.productList}">
-                <c:forEach var="product" items="${sessionScope.productList}">
-                    <tr>
-                        <td>${product.id}</td>
-                        <td><a href="#">${product.name}</a></td>
-                        <td>$ ${product.price}</td>
-                        <td>
-                            <a href="#">Delete</a>
-                        </td>
-                    </tr>
-                </c:forEach>
+                <c:if test="${not empty products}">
+                    <c:forEach items="${products}" var="product">
+                        <tr>
+                            <td><c:out value="${product.id}"/></td>
+                            <td><c:out value="${product.name}"/></td>
+                            <td>$<c:out value="${product.price}"/></td>
+                            <td>
+                                <form class="mt-3" method="post" action="product"  >
+                                    <div class="form-group">
+                                        <input type="hidden" name = "action" value="delete"/>
+                                        <button class="btn btn-success mr-2" type = "submit" name="productId" value="${product.id}">Delete</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </c:if>
-
                 </tbody>
             </table>
         </div>

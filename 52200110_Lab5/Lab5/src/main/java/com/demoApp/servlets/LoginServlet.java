@@ -54,6 +54,7 @@ public class LoginServlet extends HttpServlet {
         if(currAcc!=null){
             resp.sendRedirect( "/Lab5/product");
             sessionHttp.setAttribute("sessionAccount", "is access");
+            sessionHttp.setAttribute("userName", currUsername);
             return;
         }else{
             sessionHttp.setAttribute("sessionErrMsg", "Username or password is wrong");

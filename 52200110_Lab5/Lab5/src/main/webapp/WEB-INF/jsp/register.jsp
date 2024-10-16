@@ -2,9 +2,11 @@
 <%
     String sessionAccount = (String) session.getAttribute("sessionAccount");
     if (sessionAccount != null) {
-         String site = new String("http://localhost:8080/Lab5/product");
-         response.setStatus(response.SC_MOVED_TEMPORARILY);
-         response.setHeader("Location", site);
+        if(!sessionAccount.equals("")){
+            String site = new String("http://localhost:8080/Lab5/product");
+             response.setStatus(response.SC_MOVED_TEMPORARILY);
+             response.setHeader("Location", site);
+        }
     }
 %>
 <!DOCTYPE html>
