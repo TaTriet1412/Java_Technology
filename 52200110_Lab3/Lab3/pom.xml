@@ -37,8 +37,6 @@
       <version>5.4.7.Final</version>
     </dependency>
 
-
-
     <!-- MySQL -->
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
