@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="861d0c9a-6700-44ad-bc3b-e7abafd29d0a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/src/main/java/org/example/DTO/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/src/main/resources/appConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../52200110_Lab6/Lab6/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/College/SummaryTDTU/JavaTechnology/TH/52200110_Lab3"
+    "last_opened_file_path": "D:/College/SummaryTDTU/JavaTechnology/TH/52200110_Lab5/Lab5"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
