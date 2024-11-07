@@ -50,3 +50,12 @@ S6: clicks "Log out" to out your account
 -password: root
 
 -NOTE: You can use link to check your session login
+
+---------------------------------------------------------------------LAB 8--------------------------------------------------------------------------
+S1: Open folder data and run file mysql
+S2: Run application and enjoy
+
+--config
+-database name: lab8
+-username: root
+-password: root
