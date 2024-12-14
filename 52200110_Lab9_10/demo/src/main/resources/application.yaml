@@ -1,0 +1,23 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name:  demo
+  datasource:
+      url: "jdbc:mysql://localhost:3306/lab9_10"
+      username: root
+      password: root
+      driver-call-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        user_sql_comments: true
+        format_mysql: true
+
+logging:
+  level:
+    root: WARN
+
+
